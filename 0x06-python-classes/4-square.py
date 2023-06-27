@@ -6,7 +6,7 @@ class Square:
     """defines a class square and instantiates it
     wit a private attribute size.
     """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """instantiates a square"""
         self.size = size
 
