@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-class square:
+class Square:
     """defines a class square and instantiates it
     wit a private attribute size.
     """
