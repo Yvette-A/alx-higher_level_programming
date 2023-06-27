@@ -3,9 +3,11 @@
 
 
 class Square:
-    """defines a square"""
+    """defines a class square and instantiates it
+    wit a private attribute size.
+    """
     def __init__(self, size):
-        """intantiates a square"""
+        """instantiates a square"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
