@@ -7,7 +7,6 @@ class Square:
     wit a private attribute size.
     """
     def __init__(self, size):
-        """instantiates a square"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size < 0:
