@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
-"""an addition function."""
+"""
+an addition function.
+a is the first value given
+b is the second value and it is iptional.
+"""
 
 
 def add_integer(a, b=98):

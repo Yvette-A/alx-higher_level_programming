@@ -3,6 +3,10 @@ How to Use 0-add_integer.py
 ===========================
 
 This is an addition function. ``add_integer(a, b=98)``.
+a is the first value given
+b is the second value and it is iptional. 
+the default of b is 98. if not given it takes its default.
+the return is an integer.
 
 Usage
 =====
