@@ -1,0 +1,71 @@
+===========================
+How to Use 0-add_integer.py
+===========================
+
+This is an addition function. ``add_integer(a, b=98)``.
+
+Usage
+=====
+
+``add_integer(...)``` adds two integers and returns an integer sum.
+
+::
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+    >>> add_integer(5, 7)
+    12
+
+It also works with floating numbers. However floats are casted to integers first.
+
+::
+    
+    >>> add_integer(2.7, 1.4)
+    3
+
+If any of the values provides is not a float or an integer. a TypeError is raised
+
+::
+    
+    >>> add_integer('house', 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+    
+    >>> add_integer(3, 'house')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+If only one value is passed, the default value of b is 98
+
+::
+    
+    >>> add_integer(3)
+    101
+
+If both values are neither integers or floats, the TypeError message printed is only for the first argument
+
+::
+    
+    >>> add_integer("house", "ball")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+The function works for negatives as well
+
+::
+	
+    >>> add_integer(-5, -10)
+    -15
+
+::
+	
+    >>> add_integer(-5.8, -4.7)
+    -9
+
+As well as negatives and positives all together
+
+::
+	
+    >>> add_integer(-5.8, 6)
+    1
