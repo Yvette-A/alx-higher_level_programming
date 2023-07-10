@@ -6,5 +6,5 @@
 class MyList(list):
     """inherited from the built-in list function"""
     def print_sorted(self):
-        """Prints a list in assending sorted order"""
-        print(sorted(self))
+        if all(isinstance(item, int) for item in self):
+            print(sorted(self))
