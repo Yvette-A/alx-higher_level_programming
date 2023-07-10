@@ -1,0 +1,23 @@
+=======================
+How to use 1-my_list.py
+=======================
+
+This module prints a list in ascending order.
+
+usage
+=====
+
+"MyList(...)"' inherits from list built in function
+MyList is inherited from the built in list function and therefore will act as the
+built in list
+::
+    >>> my_list = __import__('1-my_list').MyList
+    >>> my_list = [1, 2, 3, 4]
+    >>> print(my_list)
+    [1, 2, 3, 4]
+
+::
+
+    >>> my_list.append(5)
+    >>> print(my_list)
+    [1, 2, 3, 4, 5]

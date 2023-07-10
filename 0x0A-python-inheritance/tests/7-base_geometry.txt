@@ -1,0 +1,25 @@
+=============================
+how to use 7-base_geometry.py
+=============================
+
+"def integer_validator(...)"' validates is value is an integer and is greater than 0
+
+usage
+=====
+
+if value is not an integer it will raise an exception
+::
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("name", "John")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+if value is less or equal to 0, it will raise a value error
+
+::
+
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
