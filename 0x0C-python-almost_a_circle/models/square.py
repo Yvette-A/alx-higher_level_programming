@@ -33,7 +33,7 @@ class Square(Rectangle):
                     self.x = arg
                 elif index == 3:
                     self.y = arg
-                a += 1
+                index += 1
 
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
