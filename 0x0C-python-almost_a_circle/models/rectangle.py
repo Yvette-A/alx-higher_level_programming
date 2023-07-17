@@ -82,6 +82,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args, **kwargs):
+        """updates rectangle"""
         if args and len(args) != 0:
             index = 0
             for arg in args:
