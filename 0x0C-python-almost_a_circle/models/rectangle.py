@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """defines a rectangle"""
-from .base import Base
+from models.base import Base
 
 
 class Rectangle(Base):
@@ -27,7 +27,7 @@ class Rectangle(Base):
         self.__width = value
 
     @property
-    def height(self, value):
+    def height(self):
         """defines the propeties of height"""
         return self.__height
 
@@ -76,14 +76,52 @@ class Rectangle(Base):
         if self.width == 0 or self.height == 0:
             print("")
             return
-        [print("") for y in range(self.y)]
         for h in range(self.height):
-            [print(" ", end="") for x in range(self.x)]
-            [print("#", end="") for w in range(self.width)]
+            for w in range(self.width):
+                print("#", end="")
             print()
+
+    def update(self, *args, **kwargs):
+        if args and len(args) != 0:
+            index = 0
+            for arg in args:
+                if index == 0:
+                    self.id = arg
+                elif index == 1:
+                    self.width = arg
+                elif index == 2:
+                    self.height = arg
+                elif index == 3:
+                    self.x = arg
+                elif index == 4:
+                    self.y = arg
+                index += 1
+
+        elif kwargs and len(kwargs) != 0:
+            for k, v in kwargs.items():
+                if k == "id":
+                    self.id = v
+                elif k == "width":
+                    self.width = v
+                elif k == "height":
+                    self.height = v
+                elif k == "x":
+                    self.x = v
+                elif k == "y":
+                    self.y = v
+
+    def to_dictionary(self):
+        """dictionary representation of a Rectangle."""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
 
     def __str__(self):
         """prints the string representation of a rectangle"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x,
-                                                       self.y, self.width,
-                                                       self.height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                       self.x, self.y,
+                                                       self.width, self.height)
