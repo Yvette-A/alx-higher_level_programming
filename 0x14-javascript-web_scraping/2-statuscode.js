@@ -2,9 +2,6 @@
 
 const request = require('request');
 const url = process.argv[2];
-const requestOptions = {
-	url: url
-};
-request.get(requestOptions).on('response', function (response) {
+request.get(process.argv[2]).on('response', function (response) {
 	console.log(`Code: ${response.statusCode}`);
 });
